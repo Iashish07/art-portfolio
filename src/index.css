@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@theme{
+  --color-main-background:#F7F6F2;
+  --color-Primary-text:#1A1A1A;
+  --color-Accent:#8C8C8C;
+  --font-tensor:TensorSans;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+@layer base{
+  @font-face {
+        font-family: 'TensorSans';
+        src: url('public/fonts/TensorSans-Regular.ttf') format('ttf');
+    }
+}
+@layer utilities{
+    .mask-clip-path {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  .exhibition {
+  background-color: #F7F6F2;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 16rem;
+  border-radius: 0.5rem; 
+  padding: 1rem; 
+}
+
+.display {
+  background-color: black;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.125rem;
+  height: 80%;
+  min-height: 120px;
+}
+
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+}
+}
+@media (max-width: 768px) {
+  .exhibition {
+    width: 14rem; 
+  }
+  
+  .display {
+    height: 70%;
+  }}
