@@ -25,7 +25,7 @@ const Aboutsection = () => {
         width: '100vw',
         height: '100vh',
         borderRadius: 0,
-        ease: 'none',
+        ease: '',
       });
     }, sectionRef);
     return () => ctx.revert(); 
